@@ -1,0 +1,484 @@
+// SECTION DESCRIPTION (Indian traditional flavours)
+.details {
+    padding-bottom: 6.6rem;
+    padding-top: 7rem;
+    display: flex;
+    align-content: center;
+    color: $color-white;
+
+    &__desc {
+        margin-right: 7.5rem;
+        align-self: center;
+
+        @include respond(tab-port) {
+            margin: 0 5rem;
+            text-align: center;
+        }
+
+        &-title {
+            margin-top: -1.5rem;
+            margin-bottom: 3.1rem;
+            font-size: 2.9rem;
+        }
+    
+        &-text {
+            font-size: 1.88rem;
+            line-height: 3.33rem;
+        }
+    
+    }
+
+    &__img {
+        margin-right: 8rem;
+        height: 35.5rem;
+        width: 53rem;
+        @include respond(tab-port) { display: none;}
+    }
+}
+
+
+// SECTION NEW FEATURES (3 blocks with desc )
+.features {
+    background-color: #d4d8d9;
+    padding: 9.7rem 18rem;
+    @include respond(tab-port) { padding: 7rem;}
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include respond(tab-port) {
+            max-width: 90%;
+        }
+        @include respond(phone) {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.feature-col {
+    
+    @include respond(tab-port) { &:not(:last-child) {margin-right: 2rem;}}
+    @include respond(phone) {
+        margin: 0 calc(50% - 29rem / 2);
+        margin-bottom: 2rem;
+    }
+    
+    &__ring {
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: $color-first;
+    }
+    
+    &__header {
+        margin-top: 1.8rem;
+        margin-bottom: 2.2rem;
+        font-size: 1.87rem;
+        line-height: 3.32rem;
+        @include respond(phone) { margin: .5rem 0;}
+    }
+    
+    &__text {
+        max-width: 29rem;
+        font-size: 1.66rem;
+        line-height: 2.49rem;
+    }
+}
+
+
+// PROPOSITION (SQUARE WITH PICTURES+DESC)
+.proposition {
+    background-image: url(../img/menu_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 8.8rem 0;
+    text-align: center;
+
+    &__content {
+        margin: 0 auto;
+        width: 108.2rem;
+        background-color: rgba($color-white, .8);
+        @include respond(tab-port) {
+            padding: 0 2rem;
+            width: 68rem;
+        }
+        @include respond(phone-small) {
+            width: 50rem;
+        }
+    }
+
+    &__header {
+        padding-top: 4.1rem; 
+        padding-bottom: 4.2rem;
+
+        &-title {@extend .section-title;}
+        &-subtitle {@extend .section-subtitle;}
+    }
+
+   
+}
+
+.product-tile {
+    display: flex;
+    flex-basis: calc(108.2rem / 2);
+    @include respond(tab-port) { 
+        padding-bottom: 2rem;
+        flex-basis: 68rem;
+        max-height: 34rem;
+    }
+    @include respond(phone-small) { 
+        flex-direction: column;
+        align-content: center;
+        max-height: 56rem;
+        &:nth-child(3),
+        &:nth-child(4) {flex-direction: column-reverse;}
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(tab-port) { 
+            flex-direction: column;
+            align-content: center;
+        }
+    }
+    
+    &__description {
+        flex: 1;
+        @include centerFlex;
+        flex-direction: column;
+        @include respond(tab-port) { max-width: 34rem;}
+        @include respond(phone-small) { 
+            max-height: 20rem;
+        }
+    }
+
+    &__title { @extend .item-title;}
+
+    &__text { 
+        padding: 2rem 4rem;
+        @extend .item-text;
+    }
+
+    &__price { @extend .item-price;}
+    
+    &__img { 
+        flex: 1;
+        @include respond(tab-port) { max-width: 34rem;}
+    }
+}
+
+
+// SECTION ADVICE (Traditional cuisine DESC + list)
+.advice {
+    padding-top: 8.7rem;
+    padding-bottom: 6.2rem ;
+    @include centerFlex;
+    background: url(../img/side_left_flover.png) repeat-y,
+    $color-first-light url(../img/side_right_flover.png) repeat-y 100% 0; 
+    
+
+    &__content {
+        max-width: 70rem;
+        @include centerFlex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 2.3rem;
+        font-size: 2.92rem;
+    }
+
+    &__text {
+        margin-bottom: 4rem;
+        text-align: center;
+        font-size: 1.87rem;
+        line-height: 3.33rem;
+
+        @include respond(phone) { max-width: 90%;}
+    }
+
+    &__list {
+        margin-top: 4.2rem;
+        display: flex;
+        font-size: 1.67rem;
+        font-weight: 700;
+    }
+
+    &__item { &:not(:last-child) {margin-right: 5rem;}}
+
+    &__ring {
+        display: inline-block;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        background-color: $color-first;
+    }
+}
+
+
+// SECTION DISCOVER MENU (thumb + DESC)
+.menu {
+    background-image: url(../img/section5.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 23.7rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($color-white, .8);
+    }
+
+    &__header {
+        margin: 0 auto;
+        padding-top: 3.2rem; 
+        padding-bottom: 3rem;
+        text-align: center;
+        &-title {@extend .section-title;}
+        &-subtitle {@extend .section-subtitle;}
+    }
+}
+
+.menu-item {
+    display: flex;
+    align-content: center;
+    margin-bottom: 6rem;
+    flex-basis: 42rem;
+
+    @include respond(desktop-small) { 
+        padding: 0 5%;
+        max-width: 40%;
+        margin-right: 0;
+    }
+
+    @include respond(phone) { 
+        padding: 0 10%;
+        min-width: 80%;
+    }
+    
+    &:nth-child(even) { margin-right: 0rem;}
+
+    &:nth-child(odd) {
+        margin-right: 34.5rem;
+        @include respond(desktop-small) { margin-right: 15rem;}
+        @include respond(phone) { margin-right: 0;}
+    }
+
+    &__wrapper {
+        padding-left: .7rem;
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(phone) { justify-content: center;}
+    }
+    
+    &__img {
+        margin-right: 1rem;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        background-color: $color-white;
+        border-radius: 50%;
+        height: 8rem;
+        width: 8rem;
+
+        &--1 {background-image: url(../img/vector1.png);}
+        &--2 {background-image: url(../img/vector2.png);}
+        &--3 {background-image: url(../img/vector3.png);}
+        &--4 {background-image: url(../img/vector4.png);}
+        &--5 {background-image: url(../img/vector5.png);}
+        &--6 {background-image: url(../img/vector6.png);}
+    }
+
+    &__title { 
+        margin-bottom: 1.3rem;
+        @extend .item-title;
+    }
+    &__text { @extend .item-text;}
+    &__price { @extend .item-price;}
+}
+
+
+// BG IMAGE
+.section6 {
+    height: 88.75rem;
+    background-image: url(../img/section6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include respond(tab-port) {
+        height: 20rem;
+    }
+}
+
+
+// CONTACT US / FORM
+.contact-us {
+    @include centerFlex;
+    flex-direction: column;
+
+    &__title {
+        margin-top: 3.5rem;
+        margin-bottom: 1.4rem;
+        @extend .section-title;
+        @extend .section-title--white;
+    }
+}
+
+.form {
+    @include centerFlex;
+    flex-direction: column;
+
+    &__wrapper {
+        padding-right: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include respond(desktop) { padding-right: 0;}
+        @include respond(tab-port-small) { padding: 0 2rem;}
+        @include respond(phone-small) {
+            flex-direction: column;
+            align-content: center;
+        }
+    }
+
+    
+    &__label {
+        margin-bottom: 4.1rem;
+        min-width: 24rem;
+        max-width: 24rem;
+
+        &:nth-child(1),
+        &:nth-child(4) {
+            margin-right: 24.5rem;
+            @include respond(desktop) { margin-right: 10rem;}
+            @include respond(tab-port-small) { margin-right: 0rem;}
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            margin-right: 18.5rem;
+            @include respond(desktop) { margin-right: 10rem;}
+            @include respond(tab-port-small) { margin-right: 0rem;}
+        }
+
+        &:nth-child(odd) { @include respond(tab-port-small) { margin-right: 13rem;}}
+        &:nth-child(even) { @include respond(tab-port-small) { margin-right: 0rem;}}
+        &:nth-child(odd) { @include respond(phone-small) { margin-right: 0rem;}}
+    }
+
+    &__input {
+        margin-top: 1rem;
+        padding-left: .5rem;
+        display: block;
+        height: 3rem;
+        width: 100%;
+        background-color: $color-first;
+        border: 2px solid $color-white;
+        border-radius: .5rem;
+    }
+
+    &__input:placeholder-shown,
+    &__label,
+    &__btn {
+        font-size: 1.67rem;
+        color: $color-white;
+    }
+
+    &__btn {
+        margin-top: 1.4rem;
+        margin-bottom: 7rem;
+        padding: .6rem 8.8rem;
+        line-height: 1.67rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        border-radius: .8rem solid $color-white;
+    }
+}
+
+
+// BG IMAGE
+.section8 {
+    height: 86.5rem;
+    background-image: url(../img/section8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}
+
+
+// NEW MENU
+.new-menu {
+    margin: 0 auto;
+    padding-bottom: 12.3rem;
+    background-color: $color-first-light;
+
+    &__header {
+        margin: 0 auto;
+        padding-top: 3.2rem; 
+        padding-bottom: 3rem;
+        text-align: center;
+        &-title {@extend .section-title;}
+        &-subtitle {@extend .section-subtitle;}
+    }
+}
+
+.product-card {
+    &:not(:last-child) {margin-right: 3.5rem;}
+    max-width: 33.9rem;
+    overflow: hidden;
+    background-color: $color-white;
+
+    @include respond(phone) { 
+        margin: 2rem calc(50vw - 17rem);
+        min-width: 33.9rem;
+        }
+
+    &__wrapper {
+        margin-top: 1.5rem;
+        padding-right: 4.7rem;
+        padding-left: 8.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        @include respond(desktop) { padding: 0 2rem}
+        @include respond(phone) { flex-direction: column;}
+    }
+
+    &__description { padding: 2.1rem 2.2rem 2.6rem 2.2rem;}
+
+    &__date {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    &__title {
+        margin-top: 2rem;
+        margin-bottom: .4rem;
+    }
+
+    &__btn {
+        margin-top: 2.1rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: .6rem solid $color-secondary-bright;
+    }
+
+    &__title,
+    &__text {
+        @extend .item-text
+    }
+}

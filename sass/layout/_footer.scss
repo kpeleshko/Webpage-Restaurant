@@ -1,0 +1,35 @@
+.footer {
+    padding: 4rem 0;
+    @include centerFlex;
+    flex-direction: column;
+    color: $color-white;
+
+    &__icon { margin-bottom: 2.6rem;}
+
+    &__text,
+    &__aughtor {
+        max-width: 70rem;
+        font-size: 1.88rem;
+        line-height: 3.33rem;
+        text-align: center;
+    }
+
+    &__aughtor {
+        margin-top: 1.7rem;
+        margin-bottom: 4rem;
+        font-weight: 700;
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-white;
+    }
+
+    &__link {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: $color-white;
+        margin-right: 3rem;
+    }
+}

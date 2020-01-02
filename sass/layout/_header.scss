@@ -1,0 +1,109 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17.5rem;
+    padding-right: 17.5rem;
+    padding-bottom: 6rem;
+    background-image: url(../img/menu_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include respond(desktop) {
+        padding: 0;
+    }
+}
+
+
+.main-nav {
+    padding: 5.4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-port) {
+        width: 98%;
+    }
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &__list {
+        @include centerFlex;
+        @include respond(phone) {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        justify-content: flex-start;
+        }
+    }
+
+    &__logo,
+    &__list-item {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: .7px;
+        text-transform: uppercase;
+        color: $color-text-first;
+        &:not(:last-child) {margin-right: 1.8rem;}
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
+        @include respond(phone-small) {
+            font-size: 2rem;
+        }
+    }
+
+    &__logo {
+        @include respond(tab-port) {
+            margin-left: 2rem;
+        }
+    }
+}
+
+
+.header-hero {
+    margin: 16rem auto;
+    padding: 10.2rem 0;
+    text-align: center;
+    width: 76rem;
+    height: 47rem;
+    background-color: rgba($color-white, 0.5);
+
+    @include respond(phone) {
+        margin: 10rem auto;
+        width: 52rem;
+    }
+    
+    &__title {
+        display: inline-block;
+        font-size: 10.4rem;
+        font-family: $font-family-second;
+        letter-spacing: -1px;
+        color: $color-first;
+        @include respond(phone) {
+            font-size: 8rem;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        font-size: 7.7rem;
+        font-family: $font-family-first;
+        line-height: 3.7rem;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: $color-secondary-dark;
+        @include respond(phone) {
+            font-size: 6.5rem;
+        }
+    }
+
+    &__btn {
+        margin-top: 2.7rem;
+        padding: 1rem 1.5rem;
+        font-size: 3.85rem;
+        text-transform: uppercase;
+        color: $color-first;
+        background-color: rgba($color-white, 0.5);
+    }
+}
+
+ 
+  

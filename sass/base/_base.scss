@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(desktop) { // width < 1440?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 56,25%
+    }
+
+    @include respond(desktop-small) { // width < 1200?
+        font-size: 53.125%; //1 rem = 8.5px, 8.5/16 = 53,125%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(tab-port-small) { // width < 800?
+        font-size: 46.88%; //1 rem = 7.5px
+    }
+    @include respond(phone) { // width < 600?
+        font-size: 43.75%; //1 rem = 7px
+    }
+    @include respond(phone-small) { // width < 450?
+        font-size: 40.625%; //1 rem = 6.5px
+    }
+}
+
+body {
+    font-family: $font-family-first;
+    background-color: $color-first;
+}
+
+.container {
+    max-width: 125rem;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+        @include respond(desktop) { max-width: 120rem;}
+        @include respond(desktop-small) { max-width: 100rem;}
+
+    &--small {
+        max-width: 109rem;
+        @include respond(desktop) { max-width: 110rem;}
+        @include respond(desktop-small) { max-width: 100rem;}
+    }
+}
+
+ul { list-style: none;}
+
+
+a {
+    display: inline-block;
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
